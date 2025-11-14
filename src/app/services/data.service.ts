@@ -231,7 +231,64 @@ getProjects(): Project[] {
       description: 'Takvim bazlı randevu yönetimi, otomatik bildirimler ve ileri düzey kullanıcı yönetimi.',
       technologies: ['.NET Core', 'Angular', 'MSSQL'],
       image: 'https://images.pexels.com/photos/572056/pexels-photo-572056.jpeg?auto=compress&cs=tinysrgb&w=400'
-    }
+    },
+        {
+      id: 14,
+      name: '',
+      description: '',
+      technologies: [''],
+      image: ''
+    },
+  {
+      id: 14,
+      name: '',
+      description: '',
+      technologies: [''],
+      image: ''
+    } ,  
+            {
+      id: 14,
+      name: '',
+      description: '',
+      technologies: [''],
+      image: ''
+    }  ,        {
+      id: 14,
+      name: '',
+      description: '',
+      technologies: [''],
+      image: ''
+    }    ,      {
+      id: 14,
+      name: '',
+      description: '',
+      technologies: [''],
+      image: ''
+    }    ,      {
+      id: 14,
+      name: '',
+      description: '',
+      technologies: [''],
+      image: ''
+    }    ,      {
+      id: 14,
+      name: '',
+      description: '',
+      technologies: [''],
+      image: ''
+    }    ,      {
+      id: 14,
+      name: '',
+      description: '',
+      technologies: [''],
+      image: ''
+    }    ,      {
+      id: 14,
+      name: '',
+      description: '',
+      technologies: [''],
+      image: ''
+    }   
   ];
 }
 
