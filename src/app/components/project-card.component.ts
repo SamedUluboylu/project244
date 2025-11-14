@@ -1,0 +1,29 @@
+import { Component, Input } from '@angular/core';
+import { Project } from '../models/project.model';
+
+@Component({
+  selector: 'app-project-card',
+  standalone: true,
+  template: `
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      <img [src]="project.image" [alt]="project.name" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">{{ project.name }}</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">{{ project.description }}</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          @for (tech of project.technologies; track tech) {
+            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+              {{ tech }}
+            </span>
+          }
+        </div>
+        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+          Detay
+        </button>
+      </div>
+    </div>
+  `
+})
+export class ProjectCardComponent {
+  @Input({ required: true }) project!: Project;
+}

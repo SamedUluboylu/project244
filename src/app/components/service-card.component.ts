@@ -1,0 +1,17 @@
+import { Component, Input } from '@angular/core';
+import { Service } from '../models/service.model';
+
+@Component({
+  selector: 'app-service-card',
+  standalone: true,
+  template: `
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      <div class="text-5xl mb-4">{{ service.icon }}</div>
+      <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">{{ service.title }}</h3>
+      <p class="text-gray-600 dark:text-gray-300">{{ service.description }}</p>
+    </div>
+  `
+})
+export class ServiceCardComponent {
+  @Input({ required: true }) service!: Service;
+}
