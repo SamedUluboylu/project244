@@ -8,63 +8,7 @@ import { ServiceCardComponent } from '../components/service-card.component';
   selector: 'app-home',
   standalone: true,
   imports: [RouterLink, ProjectCardComponent, ServiceCardComponent],
-  template: `
-    <div class="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
-      <section class="pt-32 pb-20 px-4">
-        <div class="container mx-auto text-center">
-          <h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-            Gönenç Bilişim
-            <span class="text-blue-600 dark:text-blue-400">Güvenilir Teknoloji Çözümleri Ortağınız</span>
-          </h1>
-          <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-Gönenç Bilişim, kurumların bilgi teknolojileri altyapılarını daha güvenli, verimli ve sürdürülebilir hale getirmek için profesyonel çözümler sunar.
-          </p>
-          <a routerLink="/iletisim"
-             class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-lg">
-            Bizimle İletişime Geç
-          </a>
-        </div>
-      </section>
-
-      <section class="py-16 px-4 bg-white dark:bg-gray-800 transition-colors duration-300">
-        <div class="container mx-auto">
-          <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-            Öne Çıkan Hizmetlerimiz
-          </h2>
-          <div class="grid md:grid-cols-3 gap-8">
-            @for (service of services.slice(0, 3); track service.id) {
-              <app-service-card [service]="service" />
-            }
-          </div>
-          <div class="text-center mt-12">
-            <a routerLink="/hizmetler"
-               class="inline-block text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold text-lg transition-colors">
-              Tüm Hizmetleri Görüntüle →
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="py-16 px-4">
-        <div class="container mx-auto">
-          <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-            Öne Çıkan Projeler
-          </h2>
-          <div class="grid md:grid-cols-3 gap-8">
-            @for (project of projects.slice(0, 3); track project.id) {
-              <app-project-card [project]="project" />
-            }
-          </div>
-          <div class="text-center mt-12">
-            <a routerLink="/projeler"
-               class="inline-block text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-semibold text-lg transition-colors">
-              Tüm Projeleri Görüntüle →
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-  `
+  templateUrl: './home.component.html'
 })
 export class HomeComponent {
   private dataService = inject(DataService);
